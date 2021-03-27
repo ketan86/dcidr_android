@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/contacts_fragment">
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/contacts_list_view"
+        android:divider="@null"/>
+    <LinearLayout
+        android:id="@+id/contact_invite_view"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:gravity="center_horizontal"
+        android:layout_height="50dp"
+        android:layout_below="@+id/contacts_list_view">
+        <Button
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:text="1"
+            android:textColor="@color/white"
+            android:background="@drawable/circle"
+            android:layout_gravity="center_vertical"/>
+
+    </LinearLayout>
+</RelativeLayout>

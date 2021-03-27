@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:background="@drawable/default_selector">
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:scaleType="centerCrop"
+        android:background="@color/black"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/user_icon"
+        android:id="@+id/image_view"/>
+    <TextView
+        android:id="@+id/added_by_user_name"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="Ketan Patel"
+        android:textSize="15dp"
+        android:ellipsize="end"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:background="@color/md_gray_100"
+        android:alpha="0.8"
+        android:layout_centerHorizontal="true"
+        android:layout_alignBottom="@+id/image_view"/>
+
+</RelativeLayout>
+

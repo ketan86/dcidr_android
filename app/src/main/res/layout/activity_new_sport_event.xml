@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sport_event_detail_relative_layout"
+    android:layout_gravity="bottom">
+    <!--<include layout="@layout/app_toolbar"-->
+        <!--android:id="@+id/new_sport_event_toolbar"/>-->
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Start"
+        android:textColor="@color/white"
+        android:id="@+id/sport_event_start_button"
+        android:background="@drawable/button_selector"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_height="match_parent"
+        android:fillViewport="false"
+        android:layout_above="@+id/sport_event_start_button">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:background="@android:color/white"
+            android:id="@+id/new_sport_event_relative_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_margin="5dp"
+            android:layout_above="@+id/sport_event_start_button">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/event_search_box"
+                android:focusable="false"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/event_search_icon"
+                android:layout_alignStart="@+id/event_search_icon"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/event_search_icon"
+                android:src="@drawable/search_icon"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_above="@+id/event_place_button"
+                android:layout_alignRight="@+id/event_place_icon"
+                android:layout_alignEnd="@+id/event_place_icon" />
+
+
+            <TextView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/event_place_icon"
+                android:background="@drawable/location_lcon"
+                android:layout_alignBaseline="@+id/event_place_button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Where"
+                android:paddingLeft="10dp"
+                android:paddingBottom="20dp"
+                android:paddingTop="10dp"
+                android:background="@drawable/default_selector"
+                android:id="@+id/event_place_button"
+                android:textSize="15dp"
+                android:layout_below="@+id/event_search_box"
+                android:layout_toRightOf="@+id/event_search_icon"
+                android:layout_toEndOf="@+id/event_search_icon"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                />
+
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_place_button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_start_linear_layout"
+                android:layout_below="@id/event_place_button">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/date_icon"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Date"
+                    android:background="@drawable/default_selector"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/event_start_date_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"/>
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/time_icon"
+                    android:layout_alignTop="@+id/event_end_time_button" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Start Time"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:background="@drawable/default_selector"
+                    android:id="@+id/event_start_time_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_start_linear_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_end_linear_layout"
+                android:layout_below="@+id/event_start_linear_layout">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/date_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Date"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/event_end_date_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/default_selector" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/time_icon"
+                    android:layout_alignTop="@+id/event_end_time_button" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End Time"
+                    android:paddingLeft="10dp"
+
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:id="@+id/event_end_time_button"
+                    android:textSize="15dp"
+                    android:background="@drawable/default_selector"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_end_linear_layout"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_decide_linear_layout"
+                android:layout_below="@+id/event_end_linear_layout">
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/date_icon"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Decide Date"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:id="@+id/event_decide_date_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/default_selector" />
+
+                <TextView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:background="@drawable/time_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Decide Time"
+                    android:paddingBottom="20dp"
+                    android:paddingTop="20dp"
+                    android:paddingLeft="10dp"
+                    android:id="@+id/event_decide_time_button"
+                    android:textSize="15dp"
+                    android:background="@drawable/default_selector"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_place_button"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/vertical_line" />
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

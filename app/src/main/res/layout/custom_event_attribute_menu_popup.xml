@@ -1,0 +1,57 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp"
+    android:background="@drawable/border_selector">
+    <LinearLayout
+        android:id="@+id/allow_diff_typeof_events_creation_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_vertical"
+        >
+        <Switch
+            android:id="@+id/allow_diff_typeof_events_creation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="10sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="allow diff typeof events creation"/>
+    </LinearLayout>
+    <View
+        android:layout_below="@+id/allow_diff_typeof_events_creation_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/md_gray_200"/>
+    <LinearLayout
+        android:layout_below="@+id/allow_diff_typeof_events_creation_linear_layout"
+        android:id="@+id/allow_event_proposal_linear_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_vertical">
+        <Switch
+            android:id="@+id/allow_event_proposal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:textSize="10sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="15sp"
+            android:text="allow event proposal"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

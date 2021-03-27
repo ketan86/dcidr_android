@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:id="@+id/name_capsule_linear_layout"
+    android:background="@drawable/capsule">
+    <ImageView
+        android:id="@+id/capsule_image_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/user_icon"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/capsule_name_text_view"
+        android:text="Ketan Patel"
+        android:textSize="15dp"
+        android:layout_marginTop="4dp" />
+    <TextView
+        android:id="@+id/capsule_cancel_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:background="@drawable/cancel_icon"
+        />
+</LinearLayout>

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/event_timeline_toolbar" />
+    <!--<TextView-->
+        <!--android:id="@+id/event_timeline_title_text"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Timeline"-->
+        <!--android:textSize="20dp"-->
+        <!--android:padding="10dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:elevation="2dp"-->
+        <!--android:layout_below="@+id/event_timeline_toolbar"/>-->
+
+
+
+    <TextView
+        android:id="@+id/no_chweet_found_msg"
+        android:layout_below="@+id/event_timeline_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_alignBottom="@+id/chweet_linear_layout"
+        android:text="no chweet found"/>
+    <LinearLayout
+        android:id="@+id/chweet_linear_layout"
+        android:layout_below="@+id/event_timeline_toolbar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="80dp"
+        android:weightSum="1"
+        android:background="@drawable/chweet_overview_selector">
+        <com.example.turbo.dcidr.utils.layout_utils.HorizontalListView
+            android:id="@+id/chweet_horizontal_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbarSize="3dp"
+            android:layout_weight="0.9"
+            android:background="@drawable/chweet_overview_selector">
+        </com.example.turbo.dcidr.utils.layout_utils.HorizontalListView>
+        <ImageView
+            android:id="@+id/chweet_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="10dp"
+            android:layout_gravity="center"
+            android:elevation="5dp"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:src="@drawable/add_chweet_icon"
+            android:background="@drawable/default_selector"
+            />
+    </LinearLayout>
+    <ListView
+        android:layout_below="@+id/chweet_linear_layout"
+        android:id="@+id/event_timeline_list_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@null">
+    </ListView>
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/event_timeline_toolbar">-->
+
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="10dp">-->
+            <!--<include-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--layout="@layout/event_timeline_custom_view"/>-->
+        <!--</LinearLayout>-->
+    <!--</ScrollView>-->
+
+
+</RelativeLayout>

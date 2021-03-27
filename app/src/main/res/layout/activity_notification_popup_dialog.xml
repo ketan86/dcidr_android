@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/notification_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="New notification received."
+        android:textAlignment="center"
+        android:layout_marginBottom="20dp"
+        />
+    <TextView
+        android:id="@+id/notification_desc"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:text="this is the message"
+        android:textAlignment="center"
+        android:layout_below="@+id/notification_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/notification_desc"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/notification_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_below="@+id/notification_desc"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_weight="0.5"/>
+        <Button
+            android:id="@+id/notification_goto_event_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goto Activity"
+            android:layout_below="@+id/notification_desc"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_weight="0.5"/>
+    </LinearLayout>
+</RelativeLayout>

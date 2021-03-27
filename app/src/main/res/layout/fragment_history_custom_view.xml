@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:background="@drawable/default_selector">
+    <TextView
+        android:layout_width="5dp"
+        android:layout_height="100dp"
+        android:id="@+id/event_color"
+        android:background="@color/colorPrimaryDark" />
+    <Button
+        android:id="@+id/history_event_members"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/circle"
+        android:textColor="@android:color/white"
+        android:text="5"
+        android:textSize="20dp"
+        android:focusable="false"
+        android:layout_marginLeft="20dp"/>
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:background="@drawable/walk_bw_icon"
+        android:id="@+id/history_event_type_icon"
+        android:layout_alignBaseline="@+id/history_event_name"
+        android:layout_alignBottom="@+id/history_event_name"
+        android:layout_toRightOf="@+id/history_event_members_text_view"
+        android:layout_toEndOf="@+id/history_event_members_text_view" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Event"
+        android:textSize="18dp"
+        android:layout_marginLeft="21dp"
+        android:textColor="@android:color/background_dark"
+        android:id="@+id/history_event_name"
+        android:layout_marginStart="21dp"
+        android:layout_alignTop="@+id/event_color"
+        android:layout_toRightOf="@+id/history_event_members_text_view"
+        android:layout_toEndOf="@+id/history_event_members_text_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_place"
+        android:text="Place"
+        android:textSize="14dp"
+        android:paddingBottom="5dp"
+        android:layout_below="@+id/history_event_name"
+        android:layout_alignLeft="@+id/history_event_name"/>
+
+    <TextView
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:id="@+id/history_event_place_icon"
+        android:background="@drawable/location_lcon"
+        android:layout_alignBaseline="@+id/history_event_place"
+        android:layout_alignLeft="@+id/history_event_type_icon"
+        android:layout_alignStart="@+id/history_event_type_icon" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_start_date"
+        android:text="Date"
+        android:layout_below="@+id/history_event_place"
+        android:layout_alignLeft="@+id/history_event_place"
+        android:layout_marginRight="10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_start_time"
+        android:text="Time"
+        android:layout_below="@+id/history_event_place"
+        android:layout_toRightOf="@+id/history_event_start_date"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_end_date"
+        android:text="Date"
+        android:layout_below="@+id/history_event_start_date"
+        android:layout_alignStart="@+id/history_event_start_date"
+        android:layout_alignLeft="@+id/history_event_start_date"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_end_time"
+        android:text="Time"
+        android:layout_below="@+id/history_event_start_time"
+        android:layout_alignStart="@+id/history_event_start_time"
+        android:layout_alignLeft="@+id/history_event_start_time"
+        android:paddingBottom="5dp"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_options"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/history_event_name"
+        android:src="@drawable/more_options_vertical"
+        />
+
+    <!--TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/history_event_members"
+        android:text="5"
+        android:layout_alignTop="@+id/textView"
+        android:layout_toLeftOf="@+id/textView"
+        android:layout_toStartOf="@+id/textView" /-->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Members"
+        android:id="@+id/history_event_members_text_view"
+        android:layout_alignBottom="@+id/history_event_rating_starts"
+        android:layout_alignLeft="@+id/history_event_members"
+        android:layout_alignStart="@+id/history_event_members" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text=""
+        android:id="@+id/history_event_rating_starts"
+        android:background="@drawable/rating_start_hightlighted_icon"
+        android:layout_below="@+id/history_event_end_time"
+        android:layout_alignLeft="@+id/history_event_end_date"
+        android:layout_alignStart="@+id/history_event_end_date" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text=""
+        android:id="@+id/textView"
+        android:background="@drawable/rating_start_hightlighted_icon"
+        android:layout_alignTop="@+id/history_event_rating_starts"
+        android:layout_toRightOf="@+id/history_event_rating_starts"
+        android:layout_toEndOf="@+id/history_event_rating_starts" />
+
+    <TextView
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:text=""
+        android:id="@+id/textView2"
+        android:background="@drawable/rating_start_hightlighted_icon"
+        android:layout_alignBaseline="@+id/textView"
+        android:layout_alignBottom="@+id/textView"
+        android:layout_toRightOf="@+id/textView"
+        android:layout_toEndOf="@+id/textView" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2 Miles away"
+        android:textSize="10dp"
+        android:layout_marginRight="15dp"
+        android:id="@+id/history_event_place_distance"
+        android:layout_alignBottom="@+id/history_event_place_icon"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"/>
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!--ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splash_bg_image"
+        android:src="@drawable/login_bg_pic_2"
+        android:scaleType="fitXY"
+        android:alpha="0.2"/-->
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:id="@+id/dcidr_logo_image_view"
+        android:src="@drawable/new_logo"
+        android:layout_gravity="center_horizontal"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="81dp" />
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/dcidr_name_text_view"-->
+        <!--android:textSize="40dp"-->
+        <!--android:text="Dcidr"-->
+        <!--android:fontFamily="sans-serif-medium"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="116dp"-->
+        <!--android:layout_below="@+id/dcidr_logo_image_view"-->
+        <!--android:layout_centerHorizontal="true" />-->
+</RelativeLayout>

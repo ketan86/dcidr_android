@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".android_activity.MainActivity">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+        <include layout="@layout/app_toolbar"
+            android:id="@+id/main_activity_toolbar"/>
+        <com.example.turbo.dcidr.utils.layout_utils.SlidingTabLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/sliding_layout"
+            android:background="@color/colorPrimary">
+        </com.example.turbo.dcidr.utils.layout_utils.SlidingTabLayout>
+        <android.support.v4.view.ViewPager
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/sliding_layout"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:id="@+id/view_pager">
+        </android.support.v4.view.ViewPager>
+    </LinearLayout>
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        android:src="@drawable/add_activity_icon"
+        app:backgroundTint="@color/colorAccent"/>
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/selected_event_toolbar" />
+
+    <LinearLayout
+        android:layout_below="@+id/selected_event_toolbar"
+        android:orientation="vertical"
+        android:id="@+id/status_details_linear_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </LinearLayout>
+    <!--<ScrollView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_below="@+id/selected_event_toolbar">-->
+        <!--<RelativeLayout-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:background="@color/white"-->
+            <!--android:layout_margin="5dp">-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Status Details"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="15dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/status_details_text_view"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<View&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colorGray"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width = "match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="1dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@id/status_details_text_view"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/status_details_info_line"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentLeft="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignParentStart="true"&ndash;&gt;-->
+                <!--&lt;!&ndash;/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/status_details_linear_layout"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:orientation="vertical"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/status_details_text_view">&ndash;&gt;-->
+            <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+            <!--&lt;!&ndash;LinearLayout-->
+                <!--android:layout_margin="10dp"-->
+                <!--android:layout_below="@+id/status_details_text_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:weightSum="1"-->
+                <!--android:id="@+id/status_details_linear_layout"-->
+                <!--&gt;-->
+                <!--<ImageView-->
+                    <!--android:id="@+id/user_profile_pic"-->
+                    <!--android:layout_width="35dp"-->
+                    <!--android:layout_height="35dp"-->
+                    <!--android:background="@drawable/user_icon"-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/user_name_text_view"-->
+                    <!--android:text="Ketan Patel"-->
+                    <!--android:textSize="20dp"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_weight="1"-->
+                    <!--/>-->
+                <!--<Button-->
+                    <!--android:id="@+id/accept_button"-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:layout_marginRight="10dp"-->
+                    <!--android:background="@drawable/accept_icon"-->
+                    <!--android:layout_gravity="center_horizontal" />-->
+
+            <!--</LinearLayout&ndash;&gt;-->
+            <!--<TextView-->
+                <!--android:id="@+id/event_details_text_view"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:text="Activity Timeline"-->
+                <!--android:textAlignment="center"-->
+                <!--android:textSize="20dp"-->
+                <!--android:layout_margin="5dp"/>-->
+            <!--<View-->
+                <!--android:background="@color/md_gray_200"-->
+                <!--android:layout_width = "match_parent"-->
+                <!--android:layout_height="1dp"-->
+                <!--android:id="@+id/event_details_info_line"-->
+                <!--android:layout_below="@id/event_details_text_view"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--/>-->
+            <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/event_name_text_view"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Hike Activity"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@id/event_details_info_line"/>&ndash;&gt;-->
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="vertical"-->
+                <!--android:padding="5dp"-->
+                <!--android:layout_below="@+id/event_details_info_line">-->
+
+            <!--<include-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--layout="@layout/event_timeline_custom_view"/>-->
+            <!--<include-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+                <!--<include-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--layout="@layout/event_timeline_custom_view"/>-->
+
+            <!--</LinearLayout>-->
+
+        <!--</RelativeLayout>-->
+
+    <!--</ScrollView>-->
+
+</RelativeLayout>

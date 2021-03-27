@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map_view_relative_layout">
+
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/map_view_toolbar"/>
+
+    <com.google.android.gms.maps.MapView
+        android:layout_below="@+id/map_view_toolbar"
+        android:id="@+id/event_map_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </com.google.android.gms.maps.MapView>
+</RelativeLayout>

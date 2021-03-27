@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/sport_event_detail_relative_layout"
+    android:layout_gravity="bottom">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/sport_event_detail_event_recreate_button">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:id="@+id/sport_event_detail_header"
+                android:background="#369671"
+                android:weightSum="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/sport_event_detail_image"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hike"
+                    android:textSize="30dp"
+                    android:layout_gravity="center"
+                    android:id="@+id/sport_event_detail_event_name"
+                    android:textColor="@android:color/white"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="San Francisco"
+                    android:layout_gravity="center"
+                    android:id="@+id/sport_event_detail_event_place"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@android:color/white"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:layout_below="@id/sport_event_detail_header"
+                android:layout_margin="10dp"
+                android:padding="10dp"
+                android:id="@+id/sport_event_detail_info">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Activity Info"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/sport_event_detail_title"/>
+                <View
+                    android:background="@color/md_gray_200"
+                    android:layout_width = "match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/sport_event_detail_info_line"
+                    android:layout_above="@+id/sport_event_detail_event_start_time_text"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:text="Start"
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/sport_event_detail_event_start_time_text"
+                    android:layout_below="@+id/sport_event_detail_title"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="start"
+                    android:id="@+id/sport_event_detail_event_start_time"
+                    android:layout_alignBottom="@+id/sport_event_detail_event_start_time_text"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="End"
+                    android:textSize="15dp"
+                    android:layout_marginTop="5dp"
+                    android:id="@+id/sport_event_detail_event_end_time_text"
+                    android:layout_below="@+id/sport_event_detail_event_start_time"
+                     />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="end"
+                    android:id="@+id/sport_event_detail_event_end_time"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/white"
+                android:padding="10dp"
+                android:orientation="vertical"
+                android:id="@+id/sport_event_detail_members"
+                android:layout_below="@+id/sport_event_detail_info"
+                android:layout_alignLeft="@+id/sport_event_detail_info"
+                android:layout_alignStart="@+id/sport_event_detail_info"
+                android:layout_alignRight="@+id/sport_event_detail_info"
+                android:layout_alignEnd="@+id/sport_event_detail_info">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:text="Members"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/sport_event_detail_members_text"/>
+                <View
+                    android:background="@color/md_gray_200"
+                    android:layout_width = "fill_parent"
+                    android:layout_height="1dip"
+                    android:layout_centerVertical ="true"
+                    android:layout_marginBottom="10dp"/>
+
+            </LinearLayout>
+
+            <!--<ListView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="300dp"-->
+                <!--android:id="@+id/sport_event_detail_event_members_list_view"-->
+                <!--android:layout_below="@+id/sport_event_detail_info"-->
+                <!--android:background="@android:color/white"-->
+                <!--android:layout_margin="10dp">-->
+            <!--</ListView>-->
+
+
+        </RelativeLayout>
+
+            <!--<RelativeLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_below="@id/sport_event_detail_header"-->
+                <!--android:id="@+id/sport_event_detail_event_members_layout"-->
+                <!--android:layout_margin="10dp">-->
+
+            <!--</RelativeLayout>-->
+            <!--&lt;!&ndash;<ListView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="300dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/sport_event_detail_event_members_list_view"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_below="@+id/sport_event_detail_header"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_margin="5dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@color/colorGray">&ndash;&gt;-->
+            <!--&lt;!&ndash;</ListView>&ndash;&gt;-->
+
+        <!--&lt;!&ndash;<LinearLayout&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_width="match_parent"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:orientation="horizontal"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:layout_below="@+id/sport_event_detail_header"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:id="@+id/sport_event_detail_members_relative_layout"&ndash;&gt;-->
+            <!--&lt;!&ndash;android:padding="10dp">&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="K"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/circle"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="P"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/circle"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/button2"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="D"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/circle"/>&ndash;&gt;-->
+            <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="L"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:background="@drawable/circle"/>&ndash;&gt;-->
+        <!--&lt;!&ndash;</LinearLayout>&ndash;&gt;-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:textSize="20dp"-->
+            <!--android:text="Start"-->
+            <!--android:id="@+id/sport_event_detail_event_start_time_text"-->
+            <!--android:layout_below="@+id/sport_event_detail_event_members_layout"-->
+            <!--android:layout_alignParentLeft="true"-->
+            <!--android:layout_alignParentStart="true"-->
+            <!--android:layout_marginBottom="10dp"-->
+            <!--android:layout_marginLeft="10dp"-->
+            <!--android:layout_marginTop="10dp"-->
+            <!--/>-->
+        <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="start"-->
+            <!--android:id="@+id/sport_event_detail_event_start_time"-->
+            <!--android:layout_alignBottom="@+id/sport_event_detail_event_start_time_text"-->
+            <!--android:layout_alignRight="@+id/sport_event_detail_event_members_layout"-->
+            <!--android:layout_alignEnd="@+id/sport_event_detail_event_members_layout" />-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="end"-->
+            <!--android:id="@+id/sport_event_detail_event_end_time"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:layout_alignRight="@+id/sport_event_detail_event_start_time"-->
+            <!--android:layout_alignEnd="@+id/sport_event_detail_event_start_time" />-->
+        <!--</RelativeLayout>-->
+    <!--</ScrollView>-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="End"-->
+        <!--android:textSize="20dp"-->
+        <!--android:id="@+id/sport_event_detail_event_end_time_text" />-->
+
+    <!--<Button-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:text="K"-->
+        <!--android:id="@+id/button"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignRight="@+id/sport_event_detail_event_end_time_text"-->
+        <!--android:layout_alignEnd="@+id/sport_event_detail_event_end_time_text" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Ketan Patel"-->
+        <!--android:textSize="20dp"-->
+        <!--android:layout_marginLeft="220dp"-->
+        <!--android:layout_marginStart="220dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toRightOf="@+id/button"-->
+        <!--android:layout_toEndOf="@+id/button" />-->
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Re-Create"
+        android:textColor="@color/white"
+        android:id="@+id/sport_event_detail_event_recreate_button"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/button_selector"/>
+
+</RelativeLayout>

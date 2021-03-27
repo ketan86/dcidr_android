@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/invite_contact_relative_layout"
+    >
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/invite_contact_toolbar"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@null"
+        android:layout_below="@+id/invite_contact_toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="10dp"
+            android:clickable="true">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:id="@+id/contact_email_edit_text"
+                android:hint="joe@dcidr.com"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true" />
+
+            <TextView
+                android:id="@+id/invite_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Joe Lewis wants to invite you to Dcidr network."
+                android:layout_below="@+id/contact_email_edit_text"/>
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:textSize="16dp"
+                android:text="Invite"
+                android:backgroundTint="@color/md_green_400"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_selector"
+                android:id="@+id/contact_invite_button"
+                android:layout_below="@+id/invite_msg"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

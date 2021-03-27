@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/hike_event_detail_relative_layout"
+    android:layout_gravity="bottom">
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/new_hike_event_toolbar"/>
+
+    <!--<Button-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Start"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:id="@+id/hike_event_start_button"-->
+        <!--android:background="@drawable/button_selector"-->
+        <!--android:layout_alignParentBottom="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+    <LinearLayout
+        android:id="@+id/event_settings_bar"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:layout_below="@+id/new_hike_event_toolbar"
+        android:layout_height="50dp"
+        android:weightSum="1">
+        <ImageView
+            android:id="@+id/event_creation_options"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/default_selector"
+            android:src="@drawable/more_options_vertical"/>
+        <!--<LinearLayout-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="vertical"-->
+            <!--android:paddingLeft="10dp"-->
+            <!--android:paddingRight="10dp"-->
+            <!--android:layout_gravity="center_vertical">-->
+            <!--<Switch-->
+                <!--android:id="@+id/allow_diff_typeof_events_creation"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignTop="@+id/event_place_text"-->
+                <!--android:textSize="10sp"/>-->
+            <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:textSize="10sp"-->
+                <!--android:text="allow diff typeof events creation"/>-->
+        <!--</LinearLayout>-->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_gravity="center_vertical">
+            <Switch
+                android:id="@+id/editable_by_others_switch"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignTop="@+id/event_place_text"
+                android:textSize="10sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="10sp"
+                android:text= "select all/none as editable"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/event_settings_bar"
+        android:id="@+id/new_hike_scrollview">
+        <!--android:layout_above="@+id/hike_event_start_button">-->
+
+        <RelativeLayout
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/new_hike_event_relative_layout"
+            android:layout_above="@+id/hike_event_start_button">
+
+            <!--<EditText-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:id="@+id/event_search_box"-->
+                <!--android:focusable="false"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignLeft="@+id/event_search_icon"-->
+                <!--android:layout_alignStart="@+id/event_search_icon"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true" />-->
+
+            <!--<ImageView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:id="@+id/event_search_icon"-->
+                <!--android:src="@drawable/search_icon"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_above="@+id/event_place_button"-->
+                <!--android:layout_alignRight="@+id/event_place_icon"-->
+                <!--android:layout_alignEnd="@+id/event_place_icon" />-->
+
+            <!--<EditText-->
+                <!--android:id="@+id/event_name_edit_text"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="40dp"-->
+                <!--android:hint="Activity Name"-->
+                <!--android:inputType="textCapWords"-->
+                <!--android:maxLength="50"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:layout_marginBottom="10dp"-->
+                <!--android:textAlignment="center"-->
+                <!--android:background="@drawable/input_edit_text_style"-->
+
+                <!--android:layout_centerHorizontal="true" />-->
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:layout_alignTop="@+id/event_name_text_view"
+                android:id="@+id/event_name_color_strip"
+                android:background="@color/md_blue_400"/>
+
+            <TextView
+                android:id="@+id/event_name_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_toRightOf="@+id/event_place_color_strip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:text="Name"/>
+
+            <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:id="@+id/event_place_icon"-->
+                <!--android:background="@drawable/location_lcon"-->
+                <!--android:layout_alignBaseline="@+id/event_place_button"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:layout_alignParentStart="true"-->
+                <!--android:layout_below="@id/event_name_edit_text"/>-->
+
+            <EditText
+                android:id="@+id/event_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:textSize="15dp"
+                android:layout_marginLeft="15dp"
+                android:hint="Activity Name"
+                android:layout_toRightOf="@+id/event_name_color_strip"
+                android:inputType="textCapWords"
+                android:layout_below="@+id/event_name_text_view"
+                android:maxLength="50"
+                android:background="@null"
+                android:layout_centerHorizontal="true" />
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_name_edit_text" />
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/event_place_color_strip"
+                android:background="@color/md_pink_400"
+                android:layout_alignTop="@+id/event_place_text" />
+
+            <TextView
+                android:id="@+id/event_place_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_toRightOf="@+id/event_place_color_strip"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_below="@id/event_name_edit_text"
+                android:text="Location"/>
+
+            <Switch
+                android:id="@+id/event_place_editable_switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:layout_alignTop="@+id/event_place_text"
+                android:layout_alignParentRight="true"
+                android:textSize="10sp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="San Francisco"
+                android:paddingBottom="10dp"
+                android:paddingTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:background="@drawable/default_selector"
+                android:id="@+id/event_place_button"
+                android:textSize="15dp"
+                android:layout_below="@+id/event_place_editable_switch"
+                android:layout_alignLeft="@+id/event_place_text"
+                />
+            <com.example.turbo.dcidr.utils.layout_utils.HorizontalListView
+                android:id="@+id/event_place_pic_horizontal_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignLeft="@+id/event_place_button"
+                android:layout_below="@+id/event_place_button">
+            </com.example.turbo.dcidr.utils.layout_utils.HorizontalListView>
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/event_start_date_color_strip"
+                android:background="@color/md_green_400"
+                android:layout_marginTop="5dp"
+                android:layout_alignTop="@+id/start_date_time_text_linear_layout"
+                />
+            <LinearLayout
+                android:id="@+id/start_date_time_text_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="5dp"
+                android:layout_toRightOf="@+id/event_end_date_color_strip"
+                android:layout_below="@id/event_place_pic_horizontal_list_view">
+                <TextView
+                    android:id="@+id/event_start_date_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Start Date"/>
+                <TextView
+                    android:id="@+id/event_start_time_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Start Time"/>
+                <Switch
+                    android:id="@+id/event_time_editable_switch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:checked="true"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_start_linear_layout"
+                android:layout_alignLeft="@+id/start_date_time_text_linear_layout"
+                android:layout_below="@id/start_date_time_text_linear_layout">
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/date_icon"/>-->
+                <!-- -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/24/2015"
+                    android:background="@drawable/default_selector"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/event_start_date_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"/>
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/time_icon"-->
+                    <!--android:layout_alignTop="@+id/event_end_time_button" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10:00 PM"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:background="@drawable/default_selector"
+                    android:id="@+id/event_start_time_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_start_linear_layout" />
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/event_end_date_color_strip"
+                android:background="@color/md_red_400"
+                android:layout_marginTop="5dp"
+                android:layout_alignTop="@+id/end_date_time_linear_layout"
+            />
+
+            <LinearLayout
+                android:id="@+id/end_date_time_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/event_end_date_color_strip"
+                android:layout_below="@id/event_start_linear_layout">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="End Date"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="End Time"/>
+                <!--<Switch-->
+                    <!--android:id="@+id/event_end_time_editable_switch"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_end_linear_layout"
+                android:layout_alignLeft="@+id/end_date_time_linear_layout"
+                android:layout_below="@+id/end_date_time_linear_layout">
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/date_icon"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/26/2015"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/event_end_date_button"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="0.5"
+                    android:background="@drawable/default_selector" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/time_icon"-->
+                    <!--android:layout_alignTop="@+id/event_end_time_button" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="12:00 PM"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/event_end_time_button"
+                    android:textSize="15dp"
+                    android:background="@drawable/default_selector"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_end_linear_layout" />
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/decide_by_date_color_strip"
+                android:background="@color/md_orange_400"
+                android:layout_marginTop="5dp"
+                android:layout_alignTop="@+id/decide_by_date_time_linear_layout"
+                />
+
+            <LinearLayout
+                android:id="@+id/decide_by_date_time_linear_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_toRightOf="@+id/decide_by_date_color_strip"
+                android:layout_below="@id/event_end_linear_layout">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Decide By Date"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:text="Decide By Time"/>
+                <!--<Switch-->
+                    <!--android:id="@+id/event_decide_by_time_editable_switch"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:weightSum="1"
+                android:id="@+id/event_decide_linear_layout"
+                android:layout_alignLeft="@+id/decide_by_date_time_linear_layout"
+                android:layout_below="@+id/decide_by_date_time_linear_layout">
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/date_icon"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="10/26/2015"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/event_decide_date_button"
+                    android:textSize="15dp"
+                    android:layout_weight="0.5"
+                    android:layout_marginLeft="10dp"
+                    android:background="@drawable/default_selector" />
+
+                <!--<TextView-->
+                    <!--android:layout_width="20dp"-->
+                    <!--android:layout_height="20dp"-->
+                    <!--android:background="@drawable/time_icon" />-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="11:00 PM"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="10dp"
+                    android:id="@+id/event_decide_time_button"
+                    android:textSize="15dp"
+                    android:background="@drawable/default_selector"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_place_pic_horizontal_list_view"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:id="@+id/vertical_line" />
+
+            <View
+                android:background="@color/md_gray_200"
+                android:layout_width = "match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/event_decide_linear_layout" />
+
+            <TextView
+                android:layout_width="5dp"
+                android:layout_height="match_parent"
+                android:id="@+id/note_color_strip"
+                android:background="@color/md_deep_purple_400"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/event_decide_linear_layout"/>
+            <TextView
+                android:id="@+id/note_title_text_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:layout_marginLeft="10dp"
+                android:layout_alignTop="@+id/note_color_strip"
+                android:text="Note"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="textCapSentences"
+                android:layout_below="@+id/note_color_strip"
+                android:layout_marginLeft="10dp"
+                android:layout_alignLeft="@+id/note_title_text_view"
+                android:id="@+id/event_notes" />
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

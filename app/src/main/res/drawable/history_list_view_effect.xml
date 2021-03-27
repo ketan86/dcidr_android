@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Adding border layers simulating drop shadow -->
+    <item>
+        <shape>
+            <padding android:top="2.5dp" android:right="5dp" android:bottom="2.5dp" android:left="5dp" />
+            <solid android:color="#fafafa" />
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="@android:color/white" />
+        </shape>
+    </item>
+</layer-list>

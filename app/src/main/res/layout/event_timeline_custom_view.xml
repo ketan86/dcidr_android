@@ -1,0 +1,744 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:cardview="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:id="@+id/event_timeline_relative_layout">
+
+    <TextView
+        android:id="@+id/event_type_color_stripe"
+        android:layout_width="3dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/event_card_view_relative_layout"
+        android:layout_alignBottom="@+id/event_card_view_relative_layout"/>
+    <!--<TextView-->
+        <!--android:layout_width="2dp"-->
+        <!--android:layout_height="135dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:id="@+id/timeline_line_top"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:layout_alignLeft="@+id/timeline_line_bottom"-->
+        <!--android:layout_alignStart="@+id/timeline_line_bottom" />-->
+
+
+    <!--<TextView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="1dp"-->
+        <!--android:id="@+id/timeline_joint"-->
+        <!--android:background="@color/md_blue_200"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="10dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="@drawable/ring"-->
+        <!--android:id="@+id/ring_text_view"-->
+        <!--android:layout_below="@+id/timeline_line_top"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="1"-->
+        <!--android:textStyle="bold"-->
+        <!--android:textColor="@color/colorPrimaryDark"-->
+        <!--android:gravity="center"-->
+        <!--android:layout_alignLeft="@id/ring_text_view"-->
+        <!--android:layout_alignRight="@+id/ring_text_view"-->
+        <!--android:layout_alignBottom="@+id/ring_text_view"-->
+        <!--android:layout_below="@+id/timeline_line_top" />-->
+
+    <!--<TextView-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:layout_width="2dp"-->
+        <!--android:layout_height="140dp"-->
+        <!--android:id="@+id/timeline_line_bottom"-->
+        <!--android:layout_below="@id/ring_text_view"-->
+        <!--android:background="@color/colorPrimaryDark" />-->
+
+    <!--<RelativeLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/event_card_view">-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+            android:layout_toRightOf="@+id/event_type_color_stripe"
+            android:id="@+id/event_card_view_relative_layout">
+            <RelativeLayout
+                android:id="@+id/event_info_relative_layout"
+                android:layout_width="match_parent"
+                android:background="@drawable/default_selector"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_name"
+                    android:text="..."
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:paddingLeft="2dp"
+                    android:paddingRight="2dp"
+                    android:paddingTop="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_alignRight="@+id/event_place"
+                    android:layout_alignEnd="@+id/event_place" />
+
+                <TextView
+                    android:id="@+id/event_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="8dp"
+                    android:layout_margin="5dp"
+                    android:padding="2dp"
+                    android:textStyle="bold"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignTop="@id/event_place"
+                    android:textColor="@color/white" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_place"
+                    android:layout_below="@+id/event_name"
+                    android:text="..."
+                    android:textSize="12dp"
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingBottom="2dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    android:layout_toLeftOf="@+id/event_expire_time"
+                    android:layout_toStartOf="@+id/event_expire_time" />
+                <TextView
+                    android:id="@+id/event_expire_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:textSize="10dp"
+                    android:layout_margin="5dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/md_red_400"/>
+                <TextView
+                    android:layout_below="@id/event_place"
+                    android:id="@+id/created_by_user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="..."
+                    android:paddingRight="2dp"
+                    android:paddingLeft="2dp"
+                    android:paddingBottom="2dp"
+                    android:textSize="8dp"
+                    android:singleLine="true"
+                    android:ellipsize="end"
+                    />
+            </RelativeLayout>
+
+            <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:orientation="horizontal"-->
+                <!--android:id="@+id/title_linear_view"-->
+                <!--android:paddingLeft="2dp"-->
+                <!--android:paddingRight="2dp"-->
+                <!--android:paddingBottom="2dp"-->
+                <!--android:weightSum="1">-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Created by "/>&ndash;&gt;-->
+
+                <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:text=" on "/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/event_creation_time"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:textSize="10dp"-->
+                    <!--android:text="12:30PM"/>-->
+            <!--</LinearLayout>-->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_above="@+id/background_event_pic"
+                android:background="@color/md_gray_100"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:orientation="horizontal"
+                android:id="@+id/background_event_pic"
+                android:layout_below="@+id/event_info_relative_layout"
+                android:weightSum="1"
+                >
+                <!--<com.example.turbo.dcidr.utils.progress_bar_utils.DottedProgressBar-->
+                    <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:padding="5dp"-->
+                    <!--app:activeDot="@drawable/active_dot"-->
+                    <!--app:dotSize="5dp"-->
+                    <!--app:inactiveDot="@drawable/inactive_dot"-->
+                    <!--app:jumpingSpeed="670"-->
+                    <!--app:spacing="15dp"-->
+                    <!--/>-->
+
+                <ImageView
+                    android:id="@+id/event_pic"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/default_selector"
+                    android:src="@drawable/mountain_icon"
+                    android:adjustViewBounds="true"
+                    android:layout_weight="0.5"/>
+                <ImageView
+                    android:id="@+id/event_map_preview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"
+                    android:background="@drawable/default_selector"
+                    android:layout_weight="0.5"
+                    />
+
+                <!--<com.google.android.gms.maps.MapView-->
+                    <!--xmlns:map="http://schemas.android.com/apk/res-auto"-->
+                    <!--android:id="@+id/event_map_view"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="0.5"-->
+                    <!--map:liteMode="true"-->
+                    <!--/>-->
+                <!--<fragment-->
+                    <!--android:id="@+id/event_map_view"-->
+                    <!--android:name="com.google.android.gms.maps.MapFragment"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:layout_weight="0.5"/>-->
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignBottom="@+id/background_event_pic"
+                android:weightSum="1">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="2dp"
+                    android:layout_weight="0.5"/>
+                <TextView
+                    android:id="@+id/distance_to_place"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/background_event_pic"
+                    android:text="..."
+                    android:background="@color/md_gray_200"
+                    android:alpha="0.8"
+                    android:padding="2dp"
+                    android:gravity="end"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_weight="0.5"/>
+            </LinearLayout>
+
+            <View
+                android:layout_below="@+id/background_event_pic"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/md_gray_100"/>
+
+            <!--<RelativeLayout-->
+                <!--android:id="@+id/event_status_info_relative_layout"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:background="@drawable/default_selector"-->
+                <!--android:padding="2dp"-->
+                <!--android:layout_below="@+id/background_event_pic"-->
+                <!--android:layout_toLeftOf="@+id/event_status_button_linear_layout"-->
+                <!--android:layout_toStartOf="@+id/event_status_button_linear_layout">-->
+                <!--&lt;!&ndash;<Button&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="40dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="40dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:background="@drawable/ring" &ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="5"/>&ndash;&gt;-->
+                <!--<Button-->
+                    <!--android:layout_width="30dp"-->
+                    <!--android:layout_height="30dp"-->
+                    <!--android:id="@+id/accepted_members_count"-->
+                    <!--android:textSize="30sp"-->
+                    <!--android:background="@drawable/ring"-->
+                    <!--android:layout_marginRight="3dp"-->
+                    <!--android:textColor="@color/md_green_400"-->
+                    <!--android:text="..."-->
+                    <!--/>-->
+                <!--<TextView-->
+                    <!--android:id="@+id/votes_text_view"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Vote(s)"-->
+                    <!--android:layout_alignBaseline="@+id/accepted_members_count"-->
+                    <!--android:layout_alignBottom="@+id/accepted_members_count"-->
+                    <!--android:layout_toRightOf="@+id/accepted_members_count"-->
+                    <!--android:layout_toEndOf="@+id/accepted_members_count" />-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_below="@id/votes_text_view"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginTop="5dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="24th October"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginBottom="2dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/event_time" />&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/accepted_members_count"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/md_green_400"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_below="@+id/event_time"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="4"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="2dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/accepted_members_icon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Accepted"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="5dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_alignTop="@+id/accepted_members_count"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toRightOf="@+id/accepted_members_count"/>&ndash;&gt;-->
+
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/declined_members_count"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="2"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textColor="@color/md_red_400"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="2dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_alignTop="@+id/accepted_members_icon"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toRightOf="@+id/accepted_members_icon"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:id="@+id/declined_members_text"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:text="Declined"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_marginRight="5dp"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_toRightOf="@+id/declined_members_count"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:layout_alignTop="@id/accepted_members_count"&ndash;&gt;-->
+                    <!--&lt;!&ndash;android:src="@drawable/decline_icon" />&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tentative_members_count"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="5"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textColor="@color/md_blue_400"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_marginRight="2dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignTop="@+id/accepted_members_count"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toRightOf="@+id/declined_members_text"/>&ndash;&gt;-->
+                <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+                <!--&lt;!&ndash;android:id="@+id/tentative_members_text"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:text="Tentative"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:gravity="center"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_alignTop="@+id/accepted_members_count"&ndash;&gt;-->
+                <!--&lt;!&ndash;android:layout_toRightOf="@+id/tentative_members_count"&ndash;&gt;-->
+                <!--&lt;!&ndash;/>&ndash;&gt;-->
+
+
+            <!--</RelativeLayout>-->
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical"
+                android:layout_alignTop="@+id/event_status_info_relative_layout"
+                android:layout_alignBottom="@+id/event_status_info_relative_layout"
+                android:id="@+id/event_status_button_linear_layout">
+
+                <Button
+                    android:id="@+id/accept_button"
+                    android:visibility="visible"
+                    android:background="@drawable/accept_icon"
+                    android:layout_width="40dp"
+                    android:elevation="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="40dp"/>
+                <Button
+                    android:id="@+id/decline_button"
+                    android:layout_width="40dp"
+                    android:visibility="visible"
+                    android:background="@drawable/decline_icon"
+                    android:layout_gravity="center_vertical"
+                    android:layout_height="40dp"
+                    android:layout_margin="3dp" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:minWidth="40dp"
+                    android:maxLines="1"
+                    android:layout_height="40dp"
+                    android:id="@+id/accepted_members_count"
+                    android:background="@drawable/ring"
+                    android:backgroundTint="@color/md_blue_400"
+                    android:layout_marginRight="2dp"
+                    android:textColor="@color/white"
+                    android:textSize="25dp"
+                    android:text="1"
+                    />
+                <!--<ImageButton-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_gravity="center_vertical"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:src="@drawable/menu_icon"-->
+                    <!--android:background="@null"-->
+                    <!--android:layout_margin="2dp"-->
+                    <!--android:id="@+id/event_selection_options"/>-->
+                <!--<android.support.design.widget.FloatingActionButton-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/accept_button"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/accept_icon"-->
+                <!--app:backgroundTint="@color/md_green_400"-->
+                <!--app:fabSize="mini"-->
+                <!--android:layout_margin="2dp"-->
+                <!--app:elevation="2dp" />-->
+                <!--<android.support.design.widget.FloatingActionButton-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:id="@+id/decline_button"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/decline_icon"-->
+                <!--app:backgroundTint="@color/md_red_400"-->
+                <!--app:fabSize="mini"-->
+                <!--android:layout_margin="2dp"-->
+                <!--app:elevation="2dp" />-->
+                <!--<android.support.design.widget.FloatingActionButton-->
+                <!--xmlns:app="http://schemas.android.com/apk/res-auto"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_gravity="center_vertical"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:src="@drawable/menu_icon"-->
+                <!--app:backgroundTint="@color/md_blue_400"-->
+                <!--app:elevation="2dp"-->
+                <!--android:layout_margin="2dp"-->
+                <!--app:fabSize="mini"-->
+                <!--android:id="@+id/event_selection_options"/>-->
+
+            </LinearLayout>
+            <RelativeLayout
+
+                android:id="@+id/event_status_info_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_below="@+id/background_event_pic"
+                android:layout_toLeftOf="@+id/event_status_button_linear_layout"
+                android:layout_toStartOf="@+id/event_status_button_linear_layout">
+
+
+                <!--<TextView-->
+                    <!--android:layout_width="15dp"-->
+                    <!--android:layout_height="15dp"-->
+                    <!--android:id="@+id/event_name_icon"-->
+                    <!--android:background="@drawable/location_lcon"-->
+                    <!--android:layout_above="@+id/event_start_date"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true" />-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_start_date"
+                    android:text="..."
+                    android:visibility="visible"
+                    android:layout_marginRight="10dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_start_time"
+                    android:text="..."
+                    android:visibility="visible"
+                    android:layout_toRightOf="@+id/event_start_date"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_end_date"
+                    android:text="..."
+                    android:visibility="visible"
+                    android:layout_below="@+id/event_start_date"
+                    android:layout_alignStart="@+id/event_start_date"
+                    android:layout_alignLeft="@+id/event_start_date"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/event_end_time"
+                    android:text="..."
+                    android:visibility="visible"
+                    android:layout_below="@+id/event_start_time"
+                    android:layout_alignStart="@+id/event_start_time"
+                    android:layout_alignLeft="@+id/event_start_time"
+                    />
+
+                <TextView
+                    android:layout_below="@+id/event_end_date"
+                    android:id="@+id/event_notes"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textMultiLine"
+                    android:ellipsize="end"
+                    android:text="..."
+                    />
+
+
+                <!--<ImageView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:id="@+id/drag_left_image_view"-->
+                    <!--android:visibility="visible"-->
+                    <!--android:layout_marginRight="2dp"-->
+                    <!--android:layout_alignTop="@+id/event_start_time"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true" />-->
+
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:id="@+id/action_linear_layout"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:layout_above="@+id/status_info_line"-->
+                    <!--android:layout_alignParentRight="true"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:weightSum="1">-->
+                    <!--<ImageView-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:id="@+id/drag_right_image_view"-->
+                        <!--android:src="@drawable/drag_right_icon"-->
+                        <!--android:padding="20dp" />-->
+                    <!--<Button-->
+                        <!--android:id="@+id/accept_button"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/accept_icon"-->
+                        <!--android:layout_gravity="center_vertical" />-->
+                    <!--<Button-->
+                        <!--android:id="@+id/decline_button"-->
+                        <!--android:layout_toRightOf="@+id/accept_button"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:layout_marginRight="10dp"-->
+                        <!--android:background="@drawable/decline_icon"-->
+                        <!--android:layout_gravity="center_vertical" />-->
+                    <!--<Button-->
+                        <!--android:id="@+id/tentative_button"-->
+                        <!--android:layout_toRightOf="@+id/declined_button"-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="30dp"-->
+                        <!--android:background="@drawable/tentative_icon"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_weight="9.29" />-->
+                    <!--&lt;!&ndash;TextView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="match_parent" />-->
+                    <!--<Button-->
+                        <!--android:id="@+id/decline_button"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@drawable/decline_icon"-->
+                        <!--android:layout_weight="0.3"-->
+                        <!--/>-->
+                    <!--<TextView-->
+                        <!--android:layout_width="30dp"-->
+                        <!--android:layout_height="match_parent" />-->
+                    <!--<Button-->
+                        <!--android:id="@+id/tentative_button"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="match_parent"-->
+                        <!--android:background="@drawable/question_mark_icon"-->
+                        <!--android:layout_weight="0.3"-->
+                        <!--/&ndash;&gt;-->
+                <!--</LinearLayout>-->
+                <!--<View-->
+                    <!--android:background="@color/md_gray_200"-->
+                    <!--android:layout_width = "match_parent"-->
+                    <!--android:layout_height="1dp"-->
+                    <!--android:id="@+id/status_info_line"-->
+                    <!--android:layout_below="@+id/event_end_date"-->
+                    <!--android:layout_alignParentLeft="true"-->
+                    <!--android:layout_alignParentStart="true" />-->
+
+
+
+                <!--<LinearLayout-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="match_parent"-->
+                    <!--android:orientation="horizontal"-->
+                    <!--android:layout_alignParentEnd="true"-->
+                    <!--android:layout_alignParentRight="true">-->
+
+                    <!--<ImageButton-->
+                        <!--android:id="@+id/accept_button"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:background="@null"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/accept_icon"-->
+                        <!--android:layout_margin="2dp"/>-->
+                    <!--<ImageButton-->
+                        <!--android:id="@+id/decline_button"-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:visibility="gone"-->
+                        <!--android:background="@null"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/decline_icon"-->
+                        <!--android:layout_margin="2dp" />-->
+                    <!--<ImageButton-->
+                        <!--android:layout_width="wrap_content"-->
+                        <!--android:layout_gravity="center_vertical"-->
+                        <!--android:layout_height="wrap_content"-->
+                        <!--android:src="@drawable/menu_icon"-->
+                        <!--android:background="@null"-->
+                        <!--android:layout_margin="2dp"-->
+                        <!--android:id="@+id/event_selection_options"/>-->
+                    <!--&lt;!&ndash;<android.support.design.widget.FloatingActionButton&ndash;&gt;-->
+                        <!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/accept_button"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/accept_icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:backgroundTint="@color/md_green_400"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:fabSize="mini"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:elevation="2dp" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;<android.support.design.widget.FloatingActionButton&ndash;&gt;-->
+                        <!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/decline_button"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:visibility="gone"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/decline_icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:backgroundTint="@color/md_red_400"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:fabSize="mini"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:elevation="2dp" />&ndash;&gt;-->
+                    <!--&lt;!&ndash;<android.support.design.widget.FloatingActionButton&ndash;&gt;-->
+                        <!--&lt;!&ndash;xmlns:app="http://schemas.android.com/apk/res-auto"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_gravity="center_vertical"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:src="@drawable/menu_icon"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:backgroundTint="@color/md_blue_400"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:elevation="2dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:layout_margin="2dp"&ndash;&gt;-->
+                        <!--&lt;!&ndash;app:fabSize="mini"&ndash;&gt;-->
+                        <!--&lt;!&ndash;android:id="@+id/event_selection_options"/>&ndash;&gt;-->
+
+                <!--</LinearLayout>-->
+
+
+
+            <!--</RelativeLayout>-->
+
+            <!--<View-->
+                <!--android:id="@+id/expire_event_overlay"-->
+                <!--android:visibility="gone"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="@color/md_gray_200"-->
+                <!--android:layout_marginBottom="-10dp"-->
+                <!--android:alpha="0.5"-->
+                <!--android:clickable="false"-->
+                <!--android:focusable="false"-->
+                <!--android:layout_alignBottom="@+id/event_info_relative_layout"-->
+                <!--android:layout_alignParentTop="true"-->
+                <!--android:layout_alignParentRight="true"-->
+                <!--android:layout_alignParentEnd="true"/>-->
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+    <View
+        android:layout_below="@+id/event_card_view_relative_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="10dp"
+        android:background="@color/md_gray_200"
+        />
+    <!--<View-->
+        <!--android:layout_width="10dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:background="@drawable/triangle"-->
+        <!--android:layout_alignTop="@+id/ring_text_view"-->
+        <!--android:layout_toRightOf="@+id/ring_text_view"-->
+        <!--android:layout_toEndOf="@+id/ring_text_view" />-->
+
+    <!--<TextView-->
+        <!--android:layout_width="2dp"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:id="@+id/timeline_line_top"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:layout_below="@+id/event_card_view"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="10dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="@drawable/ring"-->
+        <!--android:id="@+id/ring_text_view"-->
+        <!--android:layout_below="@+id/timeline_line_top"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+    <!--<TextView-->
+        <!--android:layout_width="2dp"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:id="@+id/timeline_line_bottom"-->
+        <!--android:background="@color/colorPrimaryDark"-->
+        <!--android:layout_below="@+id/ring_text_view"-->
+        <!--android:layout_centerHorizontal="true"/>-->
+
+</RelativeLayout>

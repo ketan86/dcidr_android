@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item >
+        <shape android:shape="oval">
+            <solid android:color="@color/md_gray_200"/>
+            <size
+                android:width="20dp"
+                android:height="20dp"/>
+        </shape>
+    </item>
+    <item android:left="2dp" android:right="2dp" android:bottom="2dp" android:top="2dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/md_teal_400"/>
+            <size
+                android:width="15dp"
+                android:height="15dp"/>
+        </shape>
+    </item>
+    <!--<item android:width="10dp" android:height="10dp"-->
+        <!--android:top="10dp" android:bottom="10dp" android:left="10dp" android:right="10dp"-->
+        <!--android:gravity="center"-->
+        <!--android:drawable="@drawable/dcidr_logo"-->
+        <!-->-->
+    <!--</item>-->
+</layer-list>

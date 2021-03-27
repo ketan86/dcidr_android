@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/name_capsule_linear_layout"
+        android:weightSum="1"
+        android:padding="5dp">
+        <TextView
+            android:layout_width="5dp"
+            android:layout_height="match_parent"
+            android:id="@+id/type_color"
+            android:layout_marginRight="10dp"
+            android:background="@color/colorPrimaryDark" />
+        <com.example.turbo.dcidr.utils.image_utils.rounded_image_view.CircularImageView
+            android:id="@+id/capsule_image_view"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/user_icon"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/capsule_name_text_view"
+            android:text="Ketan Patel"
+            android:layout_gravity="center_vertical"
+            android:textSize="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.98" />
+        <Button
+            android:id="@+id/capsule_cancel_button"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:background="@drawable/close_icon"
+            android:layout_gravity="center_vertical"
+            />
+    </LinearLayout>
+</RelativeLayout>

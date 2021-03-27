@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:layout_marginBottom="20dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:id="@+id/name_capsule_linear_layout"
+        android:weightSum="1"
+        android:padding="5dp">
+        <com.example.turbo.dcidr.utils.image_utils.rounded_image_view.CircularImageView
+            android:id="@+id/contact_profile_pic"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/user_icon"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/contact_name"
+            android:text="Ketan Patel"
+            android:layout_gravity="center_vertical"
+            android:textSize="15dp"
+            android:ellipsize="end"
+            android:layout_marginRight="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="0.98" />
+        <ImageButton
+            android:id="@+id/accept_invite_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/accept_icon"
+            android:layout_marginRight="5dp"
+            android:textColor="@color/md_blue_400"
+            android:layout_centerVertical="true" />
+
+        <ImageButton
+            android:id="@+id/decline_invite_button"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/decline_icon"
+            android:textColor="@color/md_blue_400"
+            android:layout_centerVertical="true" />
+    </LinearLayout>
+</RelativeLayout>

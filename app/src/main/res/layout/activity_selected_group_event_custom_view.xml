@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="5dp"
+    android:id="@+id/selected_group_event_relative_layout">
+
+    <HorizontalScrollView
+        android:id="@+id/selected_group_event_horizontal_scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarSize="1dp">
+
+        <LinearLayout
+            android:id="@+id/selected_group_events_holder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <!--<TextView-->
+                <!--android:id="@+id/"-->
+                <!--android:layout_width="2dp"-->
+                <!--android:layout_height="match_parent"-->
+                <!--android:background="#88d8b0"-->
+                <!--/>-->
+            <!--<include layout="@layout/selected_group_event_custom_view"/>-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="5dp"-->
+            <!--android:background="@drawable/input_edit_text_style">-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:text="SF Hike"/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="24th Aug 2016"-->
+            <!--android:textSize="10sp"-->
+            <!--android:singleLine="true"-->
+            <!--android:ellipsize="end"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+            <!--<LinearLayout-->
+            <!--android:layout_width="100dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:orientation="vertical"-->
+            <!--android:padding="5dp"-->
+            <!--android:background="@drawable/input_edit_text_style">-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_marginRight="5dp"-->
+            <!--android:text="SF Hike"/>-->
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="24th Aug 2016"-->
+            <!--android:textSize="10sp"-->
+            <!--android:singleLine="true"-->
+            <!--android:ellipsize="end"-->
+            <!--/>-->
+            <!--</LinearLayout>-->
+            <!--<Button-->
+            <!--android:layout_width="20dp"-->
+            <!--android:layout_height="20dp"-->
+            <!--android:background="@drawable/circle"-->
+            <!--android:backgroundTint="@color/md_green_A400"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:text="1"-->
+            <!--/>-->
+        </LinearLayout>
+        <!--<TextView-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:background="@drawable/link"-->
+        <!--android:id="@+id/link_text_view"-->
+        <!--android:layout_marginTop="7dp"-->
+        <!--android:layout_alignTop="@+id/selected_group_events_holder"/>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/selected_group_events_holder"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="vertical"-->
+        <!--android:layout_toRightOf="@+id/link_text_view">-->
+        <!--<LinearLayout-->
+        <!--android:id="@+id/event_info_linear_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/created_by_user_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Ketan"-->
+        <!--tex-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/action_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="created"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/event_name"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:text="SF Hike"/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:text="for"/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/event_time"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="24th Aug 2016"-->
+        <!--android:singleLine="true"-->
+        <!--android:ellipsize="end"-->
+
+        <!--/>-->
+
+        <!--</LinearLayout>-->
+        <!--</LinearLayout>-->
+
+
+
+        <!--<TextView-->
+        <!--android:layout_width="5dp"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:id="@+id/selected_group_event_color"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:background="@color/colorPrimaryDark" />-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/status_ribbon"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="30dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="ACCEPTED"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_toRightOf="@+id/selected_group_event_color"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/status_ribbon"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@android:color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="4dp"/>&ndash;&gt;-->
+        <!--<TextView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:background="@drawable/walk_bw_icon"-->
+        <!--android:id="@+id/selected_group_event_type_icon"-->
+        <!--android:layout_toRightOf="@+id/selected_group_event_color"-->
+        <!--android:layout_toEndOf="@+id/selected_group_event_color" />-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="Event"-->
+        <!--android:textSize="18dp"-->
+        <!--android:layout_marginLeft="21dp"-->
+        <!--android:textColor="@android:color/background_dark"-->
+        <!--android:id="@+id/selected_group_event_type"-->
+        <!--android:layout_marginStart="20dp"-->
+        <!--android:layout_alignTop="@+id/selected_group_event_color"-->
+        <!--android:layout_toRightOf="@+id/selected_group_event_color"-->
+        <!--android:layout_toEndOf="@+id/selected_group_event_color" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_event_place"-->
+        <!--android:text="Place"-->
+        <!--android:textSize="14dp"-->
+        <!--android:paddingBottom="5dp"-->
+        <!--android:layout_below="@+id/selected_group_event_type"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_type"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:id="@+id/selected_group_event_place_icon"-->
+        <!--android:background="@drawable/location_lcon"-->
+        <!--android:layout_alignBaseline="@+id/selected_group_event_place"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_type_icon"-->
+        <!--android:layout_alignStart="@+id/selected_group_event_type_icon" />-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_event_start_date"-->
+        <!--android:text="Date"-->
+        <!--android:layout_below="@+id/selected_group_event_place"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_place"-->
+        <!--android:layout_marginRight="10dp"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_event_start_time"-->
+        <!--android:text="Time"-->
+        <!--android:layout_below="@+id/selected_group_event_place"-->
+        <!--android:layout_toRightOf="@+id/selected_group_event_start_date"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_event_end_date"-->
+        <!--android:text="Date"-->
+        <!--android:layout_below="@+id/selected_group_event_start_date"-->
+        <!--android:layout_alignStart="@+id/selected_group_event_start_date"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_start_date"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_event_end_time"-->
+        <!--android:text="Time"-->
+        <!--android:layout_below="@+id/selected_group_event_start_time"-->
+        <!--android:layout_alignStart="@+id/selected_group_event_start_time"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_start_time"-->
+        <!--android:paddingBottom="5dp"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/accepted_members_count"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:layout_marginTop="5dp"-->
+        <!--android:textColor="@color/md_green_400"-->
+        <!--android:layout_below="@+id/selected_group_event_end_date"-->
+        <!--android:layout_alignLeft="@+id/selected_group_event_end_date"-->
+        <!--android:text="4"-->
+        <!--android:textStyle="bold" />-->
+        <!--<TextView-->
+        <!--android:id="@+id/accepted_members_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_alignBottom="@+id/accepted_members_count"-->
+        <!--android:layout_toRightOf="@+id/accepted_members_count"-->
+        <!--android:text="Accepted"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/declined_members_count"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:textColor="@color/md_red_400"-->
+        <!--android:layout_alignBottom="@+id/accepted_members_text"-->
+        <!--android:layout_toRightOf="@+id/accepted_members_text"-->
+        <!--android:text="2"-->
+        <!--android:textStyle="bold" />-->
+        <!--<TextView-->
+        <!--android:id="@+id/declined_members_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginRight="5dp"-->
+        <!--android:layout_alignBottom="@+id/declined_members_count"-->
+        <!--android:layout_toRightOf="@+id/declined_members_count"-->
+        <!--android:text="Declined"/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/tentative_members_count"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:textColor="@color/md_blue_400"-->
+        <!--android:layout_alignBottom="@+id/declined_members_text"-->
+        <!--android:layout_toRightOf="@+id/declined_members_text"-->
+        <!--android:layout_marginRight="2dp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:text="5"/>-->
+        <!--<TextView-->
+        <!--android:id="@+id/tentative_members_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignBottom="@+id/tentative_members_count"-->
+        <!--android:layout_toRightOf="@+id/tentative_members_count"-->
+        <!--android:text="Tentative"/>-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="2 Miles away"-->
+        <!--android:textSize="10dp"-->
+        <!--android:id="@+id/selected_group_event_place_distance"-->
+        <!--android:layout_alignBottom="@+id/selected_group_event_place_icon"-->
+        <!--android:layout_toRightOf="@+id/selected_group_event_start_time"-->
+        <!--android:layout_toEndOf="@+id/selected_group_event_start_time" />-->
+
+        <!--&lt;!&ndash;<ImageView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="100dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:paddingLeft="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/drag_left_image_view"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:src="@drawable/drag_left_icon"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentEnd="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:visibility="visible"/>&ndash;&gt;-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/selected_group_decision_timer"-->
+        <!--android:text="2 Hr Left"-->
+        <!--android:textSize="10dp"-->
+        <!--android:layout_alignParentRight="true"/>-->
+
+        <!--&lt;!&ndash;<TextView&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/current_status_label"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="wrap_content"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:text="PENDING"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textSize="10dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:padding="2dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textStyle="bold"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@color/md_orange_400"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:textColor="@color/white"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignTop="@+id/tentative_members_text"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentRight="true"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_alignParentEnd="true" />&ndash;&gt;-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/pending_action_indicator"-->
+        <!--android:layout_width="10dp"-->
+        <!--android:layout_height="10dp"-->
+        <!--android:background="@drawable/circle"-->
+        <!--android:backgroundTint="@color/md_orange_400"-->
+        <!--android:layout_alignBottom="@+id/tentative_members_text"-->
+        <!--android:layout_alignRight="@+id/selected_group_decision_timer"-->
+        <!--android:layout_alignEnd="@+id/selected_group_decision_timer" />-->
+
+        <!--<LinearLayout-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:layout_alignParentEnd="true"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:id="@+id/action_linear_layout"-->
+        <!--android:visibility="gone"-->
+        <!--android:weightSum="0.9">-->
+        <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:id="@+id/drag_right_image_view"-->
+        <!--android:src="@drawable/drag_right_icon"-->
+        <!--android:padding="20dp"-->
+        <!--android:layout_gravity="center_vertical" />-->
+        <!--&lt;!&ndash;<Button&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_toRightOf="@+id/drag_right_image_view"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:id="@+id/accept_button"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_width="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_height="50dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginTop="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:layout_marginLeft="25dp"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:focusable="false"&ndash;&gt;-->
+        <!--&lt;!&ndash;android:background="@drawable/circle"&ndash;&gt;-->
+        <!--&lt;!&ndash;/>&ndash;&gt;-->
+        <!--<Button-->
+        <!--android:id="@+id/accept_button"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@drawable/accept_icon"-->
+        <!--android:layout_gravity="center_vertical" />-->
+        <!--<Button-->
+        <!--android:id="@+id/decline_button"-->
+        <!--android:layout_toRightOf="@+id/accept_button"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:background="@drawable/decline_icon"-->
+        <!--android:layout_gravity="center_vertical" />-->
+        <!--<Button-->
+        <!--android:id="@+id/tentative_button"-->
+        <!--android:layout_toRightOf="@+id/declined_button"-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="30dp"-->
+        <!--android:background="@drawable/tentative_icon"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_weight="14.27" />-->
+        <!--&lt;!&ndash;TextView-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="match_parent" />-->
+        <!--<Button-->
+        <!--android:id="@+id/decline_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/decline_icon"-->
+        <!--android:layout_weight="0.3"-->
+        <!--/>-->
+        <!--<TextView-->
+        <!--android:layout_width="30dp"-->
+        <!--android:layout_height="match_parent" />-->
+        <!--<Button-->
+        <!--android:id="@+id/tentative_button"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@drawable/question_mark_icon"-->
+        <!--android:layout_weight="0.3"-->
+        <!--/&ndash;&gt;-->
+        <!--</LinearLayout>-->
+
+
+    </HorizontalScrollView>
+
+</RelativeLayout>

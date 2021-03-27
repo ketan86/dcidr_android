@@ -1,0 +1,56 @@
+{
+  "project_info": {
+    "project_number": "380374064937",
+    "project_id": "dcidr-turbo"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:380374064937:android:9b7d5cd4e3f1f7b3",
+        "android_client_info": {
+          "package_name": "com.example.turbo.dcidr"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "380374064937-iqcpk04hm6pvg0p1fd4mle8dlsb3l19i.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.turbo.dcidr",
+            "certificate_hash": "A2269DB1B4B6272ED6E9DC38F0D44506BC55F559"
+          }
+        },
+        {
+          "client_id": "380374064937-cph0asbhboi35ggpabjpjelmnvsogb77.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.turbo.dcidr",
+            "certificate_hash": "F4D2EE3E8D38F8D00240B982CA4B079E79828E22"
+          }
+        },
+        {
+          "client_id": "380374064937-v5pvlirqko8fu0l51ovkc4dsip89is6b.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": ""
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 1
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

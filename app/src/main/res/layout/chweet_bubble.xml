@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="120dp"
+    android:layout_height="80dp">
+
+    <LinearLayout
+        android:id="@+id/chweet_linear_layout"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/chweet_textview"
+            android:padding="5dp"
+            android:elevation="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="This is chat message"
+            android:lines="3"
+            android:textSize="10dp"
+            android:ellipsize="end"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/md_gray_200"
+            android:background="@drawable/chweet_overview_selector"
+            />
+        <!--<View-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:layout_marginBottom="2dp"-->
+        <!--android:background="@color/md_gray_400"-->
+        <!--/>-->
+        <TextView
+            android:id="@+id/chweet_user_info_date_textview"
+            android:gravity="center_horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="10dp"
+            android:padding="5dp"
+            android:elevation="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:ellipsize="end"
+            android:textStyle="bold"
+            android:maxLines="1"
+            android:text="Ketan Patel at 2:00PM"
+            android:background="@drawable/chweet_overview_selector" />
+    </LinearLayout>
+    <!--<View-->
+
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:textColor="@color/black"-->
+        <!--android:layout_marginLeft="70dp"-->
+        <!--android:layout_marginStart="70dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true" />-->
+</RelativeLayout>

@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="vertical"
+        android:weightSum="1">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="Decision Timer"
+            android:textSize="30dp"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:paddingTop="5dp"/>
+        <TextView
+            android:id="@+id/decision_selected_time"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@color/colorPrimaryDark"
+            android:text="0 Months 0 Day 0 Hr 0 Mins 0 Secs"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"
+            android:textAlignment="center"
+            android:paddingTop="5dp"
+            android:layout_weight="1" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Months"
+            android:textAlignment="center"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Days"
+            android:textAlignment="center"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hours"
+            android:textAlignment="center"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Minutes"
+            android:textAlignment="center"
+            android:layout_weight="0.2"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Secs"
+            android:textAlignment="center"
+            android:layout_weight="0.2"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="153dp">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/md_gray_400"/>
+
+        <LinearLayout
+            android:id="@+id/decision_timer_linear_layout"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:weightSum="1">
+
+            <ListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/decision_timer_months"
+                android:scrollbars="none"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:smoothScrollbar="true"
+                android:drawSelectorOnTop="false"
+                android:layout_weight="0.2"
+                android:textAlignment="center"
+                />
+            <ListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/decision_timer_days"
+                android:layout_weight="0.2"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:smoothScrollbar="true"
+                android:textAlignment="center"
+                />
+            <ListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/decision_timer_hours"
+                android:layout_weight="0.2"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:smoothScrollbar="true"
+                android:textAlignment="center"
+                />
+            <ListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/decision_timer_minutes"
+                android:layout_weight="0.2"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:smoothScrollbar="true"
+                android:textAlignment="center"
+                />
+            <ListView
+                android:layout_height="match_parent"
+                android:layout_width="match_parent"
+                android:id="@+id/decision_timer_secs"
+                android:layout_weight="0.2"
+                android:cacheColorHint="#00000000"
+                android:scrollbars="none"
+                android:fadingEdge="vertical"
+                android:soundEffectsEnabled="true"
+                android:smoothScrollbar="true"
+                android:textAlignment="center"
+                />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/colorPrimaryDark"
+            android:layout_below="@+id/decision_timer_linear_layout"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:id="@+id/textView3" />
+
+        <Button
+            android:id="@+id/decision_timer_cancel_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:layout_marginLeft="50dp"
+            android:layout_marginStart="50dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:id="@+id/decision_timer_ok_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OK"
+            android:layout_marginRight="62dp"
+            android:layout_marginEnd="62dp"
+            android:layout_alignBottom="@+id/textView3"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>
+</LinearLayout>

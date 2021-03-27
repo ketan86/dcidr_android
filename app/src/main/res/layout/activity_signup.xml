@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".android_activity.LoginActivity"
+    android:id="@+id/signup_relative_layout">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/splash_bg_image"
+        android:scaleType="fitXY"
+        android:alpha="0.4" />
+
+    <!--ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/decidr_logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:id="@+id/imageView" /-->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbarThumbVertical="@null"
+        android:layout_centerVertical="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginBottom="5dp"
+                android:inputType="textCapWords"
+                android:id="@+id/signup_user_name_edit_text"
+                android:hint="First Last"
+                android:textSize="14dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignLeft="@+id/signup_email_edit_text"
+                android:layout_alignStart="@+id/signup_email_edit_text"/>
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:src="@drawable/login_username_icon"-->
+                <!--android:layout_alignLeft="@+id/signup_user_name_edit_text"-->
+                <!--android:layout_alignStart="@+id/signup_user_name_edit_text"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_alignTop="@+id/signup_user_name_edit_text"-->
+                <!--android:layout_alignBottom="@+id/signup_user_name_edit_text"-->
+                <!--android:id="@+id/imageView3" />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="textEmailAddress"
+                android:id="@+id/signup_email_edit_text"
+                android:hint="E-mail Address"
+                android:textSize="14dp"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/signup_user_name_edit_text"
+                android:layout_alignLeft="@+id/signup_password_edit_text"
+                android:layout_alignStart="@+id/signup_password_edit_text"/>
+
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:src="@drawable/mail_icon"-->
+                <!--android:layout_alignLeft="@+id/signup_email_edit_text"-->
+                <!--android:layout_alignStart="@+id/signup_email_edit_text"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_alignTop="@+id/signup_email_edit_text"-->
+                <!--android:layout_above="@+id/signup_password_edit_text" />-->
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="14dp"
+                android:inputType="textPassword"
+                android:id="@+id/signup_password_edit_text"
+                android:hint="@string/password_hint"
+                android:layout_marginBottom="5dp"
+                android:layout_below="@+id/signup_email_edit_text"
+                android:layout_centerHorizontal="true" />
+
+            <!--<ImageView-->
+                <!--android:layout_width="30dp"-->
+                <!--android:layout_height="30dp"-->
+                <!--android:src="@drawable/lock_icon"-->
+                <!--android:layout_alignLeft="@+id/signup_password_edit_text"-->
+                <!--android:layout_alignStart="@+id/signup_password_edit_text"-->
+                <!--android:layout_marginLeft="10dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:layout_below="@+id/signup_email_edit_text"-->
+                <!--android:layout_alignBottom="@+id/signup_password_edit_text" />-->
+            <Button
+                android:layout_marginTop="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="45dp"
+                android:textSize="16dp"
+                android:text="SignUp"
+                android:textColor="@android:color/white"
+                android:background="@drawable/button_selector"
+                android:id="@+id/signup_button"
+                android:layout_below="@+id/signup_password_edit_text"
+                android:layout_alignLeft="@+id/signup_password_edit_text"
+                android:layout_alignRight="@+id/signup_password_edit_text"/>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

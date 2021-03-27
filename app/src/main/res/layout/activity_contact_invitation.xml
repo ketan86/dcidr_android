@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <include layout="@layout/app_toolbar"
+        android:id="@+id/contact_invitation_toolbar"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/contact_invitation_toolbar">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:id="@+id/incoming_invitation_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <ImageView
+                    android:id="@+id/incoming_invitation_image_view"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/incoming_user_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/incoming_invitation_title_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="People invited you,"
+                    android:textSize="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/incoming_invitation_image_view"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/incoming_invitation_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/incoming_invitation_header_view">
+
+                <com.example.turbo.dcidr.utils.layout_utils.HorizontalListView
+                    android:id="@+id/incoming_invitation_horizontal_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp">
+                </com.example.turbo.dcidr.utils.layout_utils.HorizontalListView>
+                <!--<HorizontalScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:id="@+id/incoming_invitation_horizontal_scroll_view">-->
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/incoming_invitation_card_holder_linear_layout"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="195dp"-->
+                        <!--android:orientation="horizontal">-->
+                        <TextView
+                            android:id="@+id/no_incoming_invitation_msg_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_marginLeft="10dp"
+                            android:text="no invitation(s)"
+                            android:visibility="gone"
+                            android:layout_alignTop="@+id/incoming_invitation_horizontal_list_view"
+                            android:layout_alignBottom="@+id/incoming_invitation_horizontal_list_view"/>
+                    <!--</LinearLayout>-->
+                <!--</HorizontalScrollView>-->
+
+                <com.example.turbo.dcidr.utils.progress_bar_utils.DottedProgressBar
+                    android:id="@+id/incoming_invitation_progress_bar"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:activeDot="@drawable/active_dot"
+                    app:dotSize="10dp"
+                    app:inactiveDot="@drawable/inactive_dot"
+                    app:jumpingSpeed="670"
+                    app:spacing="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/outgoing_invitation_header_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:layout_below="@+id/incoming_invitation_relative_layout">
+                <ImageView
+                    android:id="@+id/outgoing_invitation_image_view"
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/outgoing_user_icon"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"/>
+                <TextView
+                    android:id="@+id/outgoing_invitation_title_view"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="People you invited,"
+                    android:textSize="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_toRightOf="@+id/incoming_invitation_image_view"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/outgoing_invitation_relative_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/outgoing_invitation_header_view">
+
+                <com.example.turbo.dcidr.utils.layout_utils.HorizontalListView
+                    android:id="@+id/outgoing_invitation_horizontal_list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="195dp">
+                </com.example.turbo.dcidr.utils.layout_utils.HorizontalListView>
+
+                <!--<HorizontalScrollView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:scrollbars="none"-->
+                    <!--android:id="@+id/outgoing_invitation_horizontal_scroll_view">-->
+                    <!--<LinearLayout-->
+                        <!--android:id="@+id/outgoing_invitation_card_holder_linear_layout"-->
+                        <!--android:layout_width="match_parent"-->
+                        <!--android:layout_height="195dp"-->
+                        <!--android:orientation="horizontal">-->
+                        <TextView
+                            android:id="@+id/no_outgoing_invitation_msg_text"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginLeft="10dp"
+                            android:text="not invited anyone"
+                            android:layout_alignTop="@+id/outgoing_invitation_horizontal_list_view"
+                            android:layout_alignBottom="@+id/outgoing_invitation_horizontal_list_view"/>
+                    <!--</LinearLayout>-->
+                <!--</HorizontalScrollView>-->
+                <com.example.turbo.dcidr.utils.progress_bar_utils.DottedProgressBar
+                    android:id="@+id/outgoing_invitation_progress_bar"
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    app:activeDot="@drawable/active_dot"
+                    app:dotSize="10dp"
+                    app:inactiveDot="@drawable/inactive_dot"
+                    app:jumpingSpeed="670"
+                    app:spacing="15dp"
+                    android:layout_centerVertical="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

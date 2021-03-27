@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="10dp"
+    android:id="@+id/group_custom_view_relative_layout"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.example.turbo.dcidr.utils.image_utils.rounded_image_view.CircularImageView
+        android:id="@+id/group_profile_pic"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:src="@drawable/group_pic_icon"
+        app:siBorderWidth="0dp"
+        app:siBorderColor="@color/md_gray_200"
+        />
+    <!--<com.example.turbo.dcidr.utils.progress_bar_utils.DottedProgressBar-->
+        <!--android:id="@+id/progress"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="0dp"-->
+        <!--android:layout_marginRight="10dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--app:activeDot="@drawable/active_dot"-->
+        <!--app:dotSize="5dp"-->
+        <!--app:inactiveDot="@drawable/inactive_dot"-->
+        <!--app:jumpingSpeed="670"-->
+        <!--app:spacing="3dp"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_toLeftOf="@+id/group_name"-->
+        <!--android:layout_toStartOf="@+id/group_name"/>-->
+    <!--TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="5 Members"
+        android:textSize="10dp"
+        android:id="@+id/group_members_text_view"
+        android:layout_below="@+id/group_name"
+        android:layout_alignLeft="@+id/group_name"
+        android:layout_alignStart="@+id/group_name" /-->
+
+    <LinearLayout
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignTop="@+id/group_profile_pic"
+        android:layout_toRightOf="@+id/group_profile_pic"
+        android:layout_marginLeft="10dp"
+        android:gravity="center_vertical"
+        android:layout_alignBottom="@+id/group_profile_pic"
+        android:weightSum="1"
+        android:id="@+id/group_info_linear_layout">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Turbo"
+            android:id="@+id/group_name"
+            android:textSize="16dp"
+            android:textColor="@color/black"/>
+        <TextView
+            android:id="@+id/total_event_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 Activities"
+            android:textSize="10dp"
+            android:layout_alignLeft="@+id/group_name"
+            android:layout_below="@+id/group_name"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/group_unread_event_count"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:text="1"
+        android:textColor="@android:color/white"
+        android:visibility="visible"
+        android:textSize="7dp"
+        android:focusable="false"
+        android:clickable="false"
+        android:background="@drawable/circle"
+        android:backgroundTint="@color/md_light_green_A700"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/group_info_linear_layout"
+        android:layout_toStartOf="@+id/group_info_linear_layout" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/group_last_modified_time"
+        android:text="12:03 pm"
+        android:textSize="10dp"
+        android:textColor="@color/md_blue_400"
+        android:gravity="center_vertical"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@+id/group_info_linear_layout"
+        android:layout_alignParentTop="true" />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/md_gray_400"
+        android:layout_marginTop="70dp"
+        android:layout_alignLeft="@+id/group_info_linear_layout"
+        android:layout_alignStart="@+id/group_info_linear_layout" />
+</RelativeLayout>
